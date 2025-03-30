@@ -49,9 +49,12 @@ public class CalculatorController {
         // we add the function that calculates and set the transformation results when a key is release on any field.
         for (TextField textField : inputs) {
             textField.setOnKeyReleased(event -> {calculateValues();});
+
         }
+
         //applyStartupAnimation(1.5f,1);
         applyStartupAnimation(2,2);
+
 
 
     }
@@ -109,10 +112,19 @@ public class CalculatorController {
     @FXML
     public void resetValues(ActionEvent actionEvent) {
         for (TextField textField : inputs) {
-            textField.setText("");
+            textField.clear();
         }
         for(TextField textField: fieldsResult) {
-            textField.setText("");
+            textField.clear();
+        }
+    }
+
+    public void resetValues() {
+        for (TextField textField : inputs) {
+            textField.clear();
+        }
+        for(TextField textField: fieldsResult) {
+            textField.clear();
         }
     }
 }
