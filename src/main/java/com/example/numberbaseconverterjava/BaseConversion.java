@@ -6,7 +6,7 @@ public class BaseConversion {
 
 
     public static String GeneralBaseConversion(String number, int baseOriginal, int baseGoal, int precision) {
-
+            number = number.toUpperCase();
             if (baseOriginal < 2 || baseGoal < 2) {
                 return "error de base";
             }
